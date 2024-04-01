@@ -1,879 +1,222 @@
-<!doctype html>
-<!--
-   Basic template
-   -->
+<!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Bronx supermarkets making big changes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-	<head>
-		<!-- Makes the page responsive and scaled to be read easily -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Links to stylesheet -->
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<!-- Remember to update page title -->
-		<title>Kroger and Albertsons: A State-by-State Breakdown</title>
-		<style>
-			.card {
-    			width: 300px;
-    			margin: 20px;
-    			border-radius: 10px;
-    			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    			overflow: hidden;
-    			text-align: center;
-          padding: 15px;
-          border-bottom: solid rgb(255, 189, 89) 15px;
-          border-top: solid rgb(0, 74, 173) 5px;
-  			}
-			.icon-container {
-				display: flex;
-    			justify-content: center;
-    			align-items: center;
-    			flex-wrap: wrap;
-			}
-		</style>
-	</head>
-
-	<body>
-		<!-- All content goes here -->
-		<div class="container">
-			<h1>
-				Kroger and Albertsons:<br>A State-by-State Breakdown
-			</h1>
-			<h2 class="subhead">The largest grocery merger in history proposes to bring together nearly 5,000 supermarkets under one company's ownership. What does that look like in each state?
-			</h2>
-			<h5 class="byline">By Zachary Zawila</h5>
-            <h5>March 17, 2024</h5>
-		</div>
-			<figure class="top-photo">
-				<img class="main_img" src="images/safewaygj.JPG">
-			</figure>
-			<div class="container">
-				<figcaption class="head-photo">An Albertsons-owned Safeway supermarket in Grand Junction, Colorado. <span class="credit">Credit: Zachary Zawila</span></figcaption>
-			<p class="intro">The two largest supermarket chains in the United States have announced a merger. The Kroger Company, based in Cincinnati, OH, has proposed to acquire Albertsons Companies, of Boise, ID. But it's far from certain the merger will go through.
-			</p>
-				<p>
-				On January 15, 2024, the Attorney-General of Washington State 
-        <a href="https://www.npr.org/2024/01/15/1224401179/kroger-albertsons-merger-grocery-lawsuit-washington" target="_blank">sued to block the merger</a>, citing antitrust concerns. Colorado <a href="https://www.denverpost.com/2024/02/14/colorado-attorney-general-weiser-kroger-albertsons-king-soopers-merger/" target="_blank">sued on February 14</a>, and on February 26, the Federal Trade Commission, eight states, and Washington, DC <a href="https://www.cnbc.com/2024/02/26/ftc-sues-to-block-kroger-albertsons-grocery-store-merger.html" target="_blank">also sued in a joint lawsuit</a>.
-				</p>
-				<p>
-				<a href="https://boisedev.com/news/2023/08/24/albertsons-kroger-secertary-state/" target="_blank">Politicians from both parties</a>, <a href="https://www.insiderintelligence.com/content/opposition-kroger-albertsons-merger-growing" target="_blank">business representatives</a>, and <a href="https://www.reuters.com/markets/deals/unions-praise-ftc-lawsuit-blocking-kroger-albertsons-merger-2024-02-26/" target="_blank">unions</a> have indicated their opposition to the merger, while <a href="https://www.huffpost.com/entry/sherrod-brown-kroger-merger-2024-election_n_65ece58ce4b05ec1ccda4c59" target="_blank">a few politicians</a> and <a href="https://www.grocerydive.com/news/local-grocery-union-supports-kroger-albertsons-merger/708032/" target="_blank">even one union</a> have endorsed the merger.
-				</p>
-				<p>
-				In an effort to allay antitrust fears, Kroger and Albertsons <a href="https://www.bostonglobe.com/2023/10/08/business/cs-wholesale-grocers-kroger-albertsons/" target="_blank">announced a plan to sell over 400 supermarkets</a> to Keene, NH-based grocery wholesaler C&S Wholesale Grocers. Even that may not be enough, though, as there are <a href="https://www.grocerydive.com/news/cs-wholesale-grocers-kroger-albertsons-divested-stores/707690/" target="_blank">concerns about C&S's long-term ability</a> to run supermarkets. They currently own and operate just 23 supermarkets. The FTC says in their lawsuit that the divested stores would be insufficient.
-				</p>
-				<p>
-				Use the dashboard below to see the effects of the merger, state-by-state, looking at number of stores, opposition, and divestitures.
-				</p>
-
-		</div>
-
-<hr>
-
-		<h2>The Merger, State by State</h2>
-
-    <div class="buttons-container">
-
-      <div class="filter-container">
-
-        <label><b>Filter by Operator:</b></label><br>
-        <label><input type="checkbox" class="toggleCheckbox" value="kr"> Kroger</label>
-        <label><input type="checkbox" class="toggleCheckbox" value="aci"> Albertsons</label>
-        
-      </div>
-
-        <hr class="thin">
-
-      <div class="filter-container">
-
-        <label><b>Filter by Opposition:</b></label><br>
-        <label><input type="checkbox" class="toggleCheckbox" value="sen"> <span class="span_sen">Senator</span></label>
-        <label><input type="checkbox" class="toggleCheckbox" value="rep"> <span class="span_rep">Representative</span></label>
-        <label><input type="checkbox" class="toggleCheckbox" value="sec"> <span class="span_sec">Secretary of State</span></label>
-        <label><input type="checkbox" class="toggleCheckbox" value="ag"> <span class="span_ag">Attorney-General</span></label>
-        <label><input type="checkbox" class="toggleCheckbox" value="union"> <span class="span_union">Union</span></label>
-
-        
-      </div>
-
-      <hr class="thin">
-
-      <div class="filter-container">
-
-        <label><b>Filter by Legal Challenges:</b></label><br>
-        <label><input type="checkbox" class="toggleCheckbox" value="state"> <span class="span_state">State Lawsuit Filed</span></label>
-        <label><input type="checkbox" class="toggleCheckbox" value="fed"> <span class="span_fed">Federal Lawsuit Filed</span></label>
-
-      </div>
-
-      <hr class="thin">
-
-      <div class="filter-container">
-
-        <label><b>Filter by Divestitures:</b></label><br>
-        <label><input type="checkbox" class="toggleCheckbox" value="di"> <span class="span_di">Show Only States with Proposed Divestitures</span></label>
-        
-      </div>
-
-      </div>
+<div class="heading-container">
+  <img src="images/heading.JPG" alt="Picture of lemons and other citrus stacked in a grocery store" class="heading-image">
+  <div class="content-container">
+    <img src="images/icon.PNG" alt="Icon" class="icon">
+    <h1>South Bronx supermarkets making big changes</h1>
+    <div class="line"></div>
+    <h5>By Zachary Zawila  |  April 7, 2024</h5>
+  </div>
+</div>
 
 
-    
+<div class="container intro">
 
-		<!-- flex box on tablet and desktop -->
-		<div class="icon-container">
+<p class="intro">
+Supermarkets across the South Bronx are changing. They are opening, closing, rebranding, and renovating. It’s shifting the composition of who owns and runs these supermarkets, and could eventually result in lower prices fueled by more competition. <br><br>
 
-<!-- Alabama -->
-<div class="card kr">
-	<img src="images/Alabama.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Alabama</h2>
-	  <h3>Kroger Stores: 10</h3>
-	  <h3>Albertsons Stores: 0</h3>
-	  <p>Proposed Divestitures: 0</p>
-	  <h4>Total After Merger: 10</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: none</p>
-	</div>
-  </div>
-  
-  <!-- Alaska -->
-  <div class="card kr aci sen rep union di">
-	<img src="images/Alaska.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Alaska</h2>
-	  <h3>Kroger Stores: 11</h3>
-	  <h3>Albertsons Stores: 23</h3>
-	  <p><span class="span_di">Proposed Divestitures: 14</span></p>
-	  <h4>Total After Merger: 20</h4>
-	  <p>Notable Opposition: <span class="span_sen">Sen.&nbsp;Lisa&nbsp;Murkowski <span class="span_sen">Sen.&nbsp;Dan&nbsp;Sullivan</span> <span class="span_rep">Rep.&nbsp;Mary&nbsp;Peltola</span> <span class="span_union">UFCW&nbsp;Local&nbsp;1496</span> <span class="span_union">Teamsters&nbsp;Local&nbsp;959</span></p>
-	  <p>Legal Challenges: none</p>
-	</div>
-  </div>
-  
-  <!-- Arizona -->
-  <div class="card kr aci sec ag fed di">
-	<img src="images/Arizona.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Arizona</h2>
-	  <h3>Kroger Stores: 126</h3>
-	  <h3>Albertsons Stores: 135</h3>
-	  <p><span class="span_di">Proposed Divestitures: 24</span></p>
-	  <h4>Total After Merger: 237</h4>
-	  <p>Notable Opposition: <span class="span_sec">Sec.&nbsp;Adrian&nbsp;Fontes</span> <span class="span_ag">AG&nbsp;Kris&nbsp;Mayes</span></p>
-	  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-	</div>
-  </div>
-  
-  <!-- Arkansas -->
-  <div class="card kr aci">
-	<img src="images/Arkansas.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Arkansas</h2>
-	  <h3>Kroger Stores: 32</h3>
-	  <h3>Albertsons Stores: 1</h3>
-	  <p>Proposed Divestitures: 0</p>
-	  <h4>Total After Merger: 33</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: none</p>
-	</div>
-  </div>
-  
-  <!-- California -->
-  <div class="card kr aci ag union fed di">
-	<img src="images/California.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>California</h2>
-	  <h3>Kroger Stores: 302</h3>
-	  <h3>Albertsons Stores: 586</h3>
-	  <p><span class="span_di">Proposed Divestitures: 66</span></p>
-	  <h4>Total After Merger: 822</h4>
-	  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Rob&nbsp;Bonta</span><br><span class="span_union">UFCW&nbsp;Local&nbsp;5</span> <span class="span_union">UFCW&nbsp;Local&nbsp;324</span> <span class="span_union">UFCW&nbsp;Local&nbsp;770</span></p>
-	  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-	</div>
-  </div>
-  
-  <!-- Colorado -->
-  <div class="card kr aci ag sec union state di">
-	<img src="images/Colorado.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Colorado</h2>
-	  <h3>Kroger Stores: 148</h3>
-	  <h3>Albertsons Stores: 105</h3>
-	  <p><span class="span_di">Proposed Divestitures: 52</span></p>
-	  <h4>Total After Merger: 201</h4>
-	  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Phil&nbsp;Weiser</span> <span class="span_sec">Sec.&nbsp;Jena&nbsp;Griswold</span> <span class="span_union">UFCW&nbsp;Local&nbsp;7</span></p>
-	  <p>Legal Challenges: <span class="span_state">State&nbsp;Lawsuit</span></p>
-	</div>
-  </div>
-  
-  <!-- Connecticut -->
-  <div class="card aci">
-	<img src="images/Connecticut.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Connecticut</h2>
-	  <h3>Kroger Stores: 0</h3>
-	  <h3>Albertsons Stores: 7</h3>
-	  <p>Proposed Divestitures: 0</p>
-	  <h4>Total After Merger: 7</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: none</p>
-	</div>
-  </div>
-  
-  <!-- Delaware -->
-  <div class="card kr aci">
-	<img src="images/Delaware.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Delaware</h2>
-	  <h3>Kroger Stores: 2</h3>
-	  <h3>Albertsons Stores: 18</h3>
-	  <p>Proposed Divestitures: 0</p>
-	  <h4>Total After Merger: 20</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: none</p>
-	</div>
-  </div>
-  
-  <!-- District of Columbia -->
-  <div class="card kr aci fed di">
-	<img src="images/DC.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>District of Columbia</h2>
-	  <h3>Kroger Stores: 3</h3>
-	  <h3>Albertsons Stores: 12</h3>
-	  <p><span class="span_di">Proposed Divestitures: 0*</span></p>
-	  <h4>Total After Merger: 15</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-	</div>
-  </div>
-  
-  <!-- Florida -->
-  <div class="card kr">
-	<img src="images/Florida.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Florida</h2>
-	  <h3>Kroger Stores: 1</h3>
-	  <h3>Albertsons Stores: 0</h3>
-	  <p>Proposed Divestitures: 0</p>
-	  <h4>Total After Merger: 1</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Georgia -->
-  <div class="card kr">
-	<img src="images/Georgia.jpg" alt="Placeholder Image">
-	<div class="card-content">
-	  <h2>Georgia</h2>
-	  <h3>Kroger Stores: 167</h3>
-	  <h3>Albertsons Stores: 0</h3>
-	  <p>Proposed Divestitures: 0</p>
-	  <h4>Total After Merger: 167</h4>
-	  <p>Notable Opposition: none</p>
-	  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Hawaii -->
-  <div class="card aci">
-  <img src="images/Hawaii.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Hawaii</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 23</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 23</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Idaho -->
-  <div class="card kr aci union di">
-  <img src="images/Idaho.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Idaho</h2>
-  <h3>Kroger Stores: 15</h3>
-  <h3>Albertsons Stores: 44</h3>
-  <p><span class="span_di">Proposed Divestitures: 13</span></p>
-  <h4>Total After Merger: 46</h4>
-  <p>Notable Opposition: <span class="span_union">UFCW&nbsp;Local&nbsp;3000</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Illinois -->
-  <div class="card kr aci ag fed di">
-  <img src="images/Illinois.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Illinois</h2>
-  <h3>Kroger Stores: 104</h3>
-  <h3>Albertsons Stores: 183</h3>
-  <p><span class="span_di">Proposed Divestitures: 14</span></p>
-  <h4>Total After Merger: 273</h4>
-  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Kwame&nbsp;Raoul</span></p>
-  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  <!-- Indiana -->
-  <div class="card kr aci">
-  <img src="images/Indiana.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Indiana</h2>
-  <h3>Kroger Stores: 152</h3>
-  <h3>Albertsons Stores: 4</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 156</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Iowa -->
-  <div class="card aci">
-  <img src="images/Iowa.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Iowa</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 1</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 1</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Kansas -->
-  <div class="card kr">
-  <img src="images/Kansas.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Kansas</h2>
-  <h3>Kroger Stores: 64</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 64</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Kentucky -->
-  <div class="card kr">
-  <img src="images/Kentucky.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Kentucky</h2>
-  <h3>Kroger Stores: 112</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 112</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Louisiana -->
-  <div class="card kr aci di">
-  <img src="images/Louisiana.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Louisiana</h2>
-  <h3>Kroger Stores: 7</h3>
-  <h3>Albertsons Stores: 16</h3>
-  <p><span class="span_di">Proposed Divestitures: 2</span></p>
-  <h4>Total After Merger: 21</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Maine -->
-  <div class="card aci sec">
-  <img src="images/Maine.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Maine</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 19</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 19</h4>
-  <p>Notable Opposition: <span class="span_sec">Sec.&nbsp;Shenna&nbsp;Bellows</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Maryland -->
-  <div class="card kr aci ag union fed di">
-  <img src="images/Maryland.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Maryland</h2>
-  <h3>Kroger Stores: 18</h3>
-  <h3>Albertsons Stores: 68</h3>
-  <p><span class="span_di">Proposed Divestitures: 0*</span></p>
-  <h4>Total After Merger: 86</h4>
-  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Anthony&nbsp;Brown</span> <span class="span_union">UFCW&nbsp;Local&nbsp;400</span></p>
-  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  <!-- Massachusetts -->
-  <div class="card aci sen">
-  <img src="images/Massachusetts.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Massachusetts</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 76</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 76</h4>
-  <p>Notable Opposition: <span class="span_sen">Sen.&nbsp;Elizabeth&nbsp;Warren</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Michigan -->
-  <div class="card kr union">
-  <img src="images/Michigan.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Michigan</h2>
-  <h3>Kroger Stores: 120</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 120</h4>
-  <p>Notable Opposition: <span class="span_union">UFCW&nbsp;Local&nbsp;951</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Minnesota -->
-  <div class="card neither sec">
-  <img src="images/Minnesota.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Minnesota</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 0</h4>
-  <p>Notable Opposition: <span class="span_sec">Sec.&nbsp;Steve&nbsp;Simon</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Mississippi -->
-  <div class="card kr">
-  <img src="images/Mississippi.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Mississippi</h2>
-  <h3>Kroger Stores: 31</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 31</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Missouri -->
-  <div class="card kr">
-  <img src="images/Missouri.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Missouri</h2>
-  <h3>Kroger Stores: 15</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 15</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Montana -->
-  <div class="card kr aci di">
-  <img src="images/Montana.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Montana</h2>
-  <h3>Kroger Stores: 4</h3>
-  <h3>Albertsons Stores: 40</h3>
-  <p><span class="span_di">Proposed Divestitures: 2</span></p>
-  <h4>Total After Merger: 42</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Nebraska -->
-  <div class="card kr aci">
-  <img src="images/Nebraska.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Nebraska</h2>
-  <h3>Kroger Stores: 11</h3>
-  <h3>Albertsons Stores: 5</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 16</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Nevada -->
-  <div class="card kr aci ag fed di">
-  <img src="images/Nevada.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Nevada</h2>
-  <h3>Kroger Stores: 46</h3>
-  <h3>Albertsons Stores: 50</h3>
-  <p><span class="span_di">Proposed Divestitures: 15</span></p>
-  <h4>Total After Merger: 81</h4>
-  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Aaron&nbsp;Ford</span></p>
-  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  <!-- New Hampshire -->
-  <div class="card aci">
-  <img src="images/New Hampshire.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>New Hampshire</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 26</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 26</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- New Jersey -->
-  <div class="card aci">
-  <img src="images/New Jersey.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>New Jersey</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 69</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 69</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- New Mexico -->
-  <div class="card kr aci sec ag union fed di">
-  <img src="images/New Mexico.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>New Mexico</h2>
-  <h3>Kroger Stores: 25</h3>
-  <h3>Albertsons Stores: 34</h3>
-  <p><span class="span_di">Proposed Divestitures: 12</span></p>
-  <h4>Total After Merger: 47</h4>
-  <p>Notable Opposition: <span class="span_sec">Sec.&nbsp;Maggie&nbsp;Toulouse</span> <span class="span_ag">AG&nbsp;Raul&nbsp;Torrez</span> <span class="span_union">UFCW&nbsp;Local&nbsp;1564</span></p>
-  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  <!-- New York -->
-  <div class="card aci">
-  <img src="images/New York.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>New York</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 19</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 19</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- North Carolina -->
-  <div class="card kr">
-  <img src="images/North Carolina.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>North Carolina</h2>
-  <h3>Kroger Stores: 150</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 150</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- North Dakota -->
-  <div class="card aci">
-  <img src="images/North Dakota.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>North Dakota</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 1</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 1</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Ohio -->
-  <div class="card kr">
-  <img src="images/Ohio.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Ohio</h2>
-  <h3>Kroger Stores: 211</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 211</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Oklahoma -->
-  <div class="card neither">
-  <img src="images/Oklahoma.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Oklahoma</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 0</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Oregon -->
-  <div class="card kr aci ag union fed di">
-  <img src="images/Oregon.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Oregon</h2>
-  <h3>Kroger Stores: 56</h3>
-  <h3>Albertsons Stores: 121</h3>
-  <p><span class="span_di">Proposed Divestitures: 49</span></p>
-  <h4>Total After Merger: 128</h4>
-  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Ellen&nbsp;Rosenblum</span> <span class="span_union">UFCW&nbsp;Local&nbsp;3000</span></p>
-  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  <!-- Pennsylvania -->
-  <div class="card aci">
-  <img src="images/Pennsylvania.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Pennsylvania</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 50</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 50</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Rhode Island -->
-  <div class="card aci sec">
-  <img src="images/Rhode Island.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Rhode Island</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 8</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 8</h4>
-  <p>Notable Opposition: <span class="span_sec">Sec.&nbsp;Gregg&nbsp;Amore</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- South Carolina -->
-  <div class="card kr">
-  <img src="images/South Carolina.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>South Carolina</h2>
-  <h3>Kroger Stores: 12</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 12</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- South Dakota -->
-  <div class="card aci">
-  <img src="images/South Dakota.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>South Dakota</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 3</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 3</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Tennessee -->
-  <div class="card kr">
-  <img src="images/Tennessee.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Tennessee</h2>
-  <h3>Kroger Stores: 121</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 121</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Texas -->
-  <div class="card kr aci di">
-  <img src="images/Texas.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Texas</h2>
-  <h3>Kroger Stores: 218</h3>
-  <h3>Albertsons Stores: 208</h3>
-  <p><span class="span_di">Proposed Divestitures: 26</span></p>
-  <h4>Total After Merger: 400</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Utah -->
-  <div class="card kr aci di">
-  <img src="images/Utah.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Utah</h2>
-  <h3>Kroger Stores: 57</h3>
-  <h3>Albertsons Stores: 6</h3>
-  <p><span class="span_di">Proposed Divestitures: 4</span></p>
-  <h4>Total After Merger: 59</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Vermont -->
-  <div class="card aci sec">
-  <img src="images/Vermont.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Vermont</h2>
-  <h3>Kroger Stores: 0</h3>
-  <h3>Albertsons Stores: 19</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 19</h4>
-  <p>Notable Opposition: <span class="span_sec">Sec.&nbsp;Sarah&nbsp;Copeland-Hanzas</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Virginia -->
-  <div class="card kr aci union di">
-  <img src="images/Virginia.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Virginia</h2>
-  <h3>Kroger Stores: 69</h3>
-  <h3>Albertsons Stores: 39</h3>
-  <p><span class="span_di">Proposed Divestitures: 10*</span></p>
-  <h4>Total After Merger: 98</h4>
-  <p>Notable Opposition: <span class="span_union">Virginia&nbsp;AFL-CIO</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Washington -->
-  <div class="card kr aci ag union state di">
-  <img src="images/Washington.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Washington</h2>
-  <h3>Kroger Stores: 117</h3>
-  <h3>Albertsons Stores: 215</h3>
-  <p><span class="span_di">Proposed Divestitures: 104</span></p>
-  <h4>Total After Merger: 228</h4>
-  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Bob&nbsp;Ferguson</span> <span class="span_union">UFCW&nbsp;Local&nbsp;3000</span> <span class="span_union">Teamsters&nbsp;Local&nbsp;38</span> <span class="span_union">Unite&nbsp;Here&nbsp;Local&nbsp;8</span></p>
-  <p>Legal Challenges: <span class="span_state">State&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  <!-- West Virginia -->
-  <div class="card kr union">
-  <img src="images/West Virginia.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>West Virginia</h2>
-  <h3>Kroger Stores: 40</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 40</h4>
-  <p>Notable Opposition: <span class="span_union">West&nbsp;Virginia&nbsp;AFL-CIO</span></p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Wisconsin -->
-  <div class="card kr">
-  <img src="images/Wisconsin.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Wisconsin</h2>
-  <h3>Kroger Stores: 107</h3>
-  <h3>Albertsons Stores: 0</h3>
-  <p>Proposed Divestitures: 0</p>
-  <h4>Total After Merger: 107</h4>
-  <p>Notable Opposition: none</p>
-  <p>Legal Challenges: none</p>
-  </div>
-  </div>
-  
-  <!-- Wyoming -->
-  <div class="card kr aci ag fed di">
-  <img src="images/Wyoming.jpg" alt="Placeholder Image">
-  <div class="card-content">
-  <h2>Wyoming</h2>
-  <h3>Kroger Stores: 9</h3>
-  <h3>Albertsons Stores: 15</h3>
-  <p><span class="span_di">Proposed Divestitures: 6</span></p>
-  <h4>Total After Merger: 18</h4>
-  <p>Notable Opposition: <span class="span_ag">AG&nbsp;Bridget&nbsp;Hill</span></p>
-  <p>Legal Challenges: <span class="span_fed">Federal&nbsp;Lawsuit</span></p>
-  </div>
-  </div>
-  
-  </div>
-  
-  </body>
-  <hr>
-  <p class="disclaimer">*The companies intend to divest 10 stores in Maryland, Virginia, and Washington, D.C. They have not specified where each divestiture is.</p>
-  </html>
+On a Tuesday morning, cases of groceries were lined up along 161st Street. This is a familiar scene outside of the Associated Supermarket in Woodstock, as workers rolled produce and dry goods off of trucks and into the store’s receiving door. <br><br>
+
+That day, though, something new was in the delivery—cases of Urban Meadow seltzer, soon to replace the Avenue A-branded beverages on the shelves now. <br><br>
+
+The store is in the process of a rebrand to Food Universe, and over time, the Avenue A-branded groceries from Associated will be replaced with the Urban Meadow brand. <br><br>
+</p>
+</div>
+
+<!-- <div class="placeholder">
+  <h3>This is a placeholder.</h3>
+
+</div> -->
+
+<img src="images/associated.JPG" class="bigpicture">
 
 
 
-<!-- Script below -->
 
-<script>
+<!-- <div id="scroll-image">
+  <img src=
+"images/associated.JPG"
+       class="test" />
+  <img src=
+"images/fooduniverse.JPG"
+       class="test" />
+</div> -->
 
-// Operators Filter
+<script src="script.js"></script>
 
-const operatorsFilter = document.querySelectorAll('.toggleCheckbox');
-const items = document.querySelectorAll('.card');
+<br><br><br>
 
-function filterByOperator() {
-    const selectedTypes = document.querySelectorAll('input[type="checkbox"]:checked');
-    const selectedTypeValues = Array.from(selectedTypes).map(checkbox => checkbox.value);
-    
-    items.forEach(item => {
-        const types = item.classList; // Assuming the item may have multiple classes
-        if (selectedTypes.length === 0 || selectedTypeValues.some(value => types.contains(value))) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
+<div class="container new_supermarket">
 
-operatorsFilter.forEach(checkbox => checkbox.addEventListener('change', filterByOperator));
+  <img src="images/icon.PNG" alt="Icon" class="icon">
+  <h2>A New Supermarket</h2>
+  <div class="line"></div>
 
-// Divestitures Filter
+<p class="new_supermarket">
+  As that store prepares to transition into its new brand, a grocer in Mott Haven is making waves as the neighborhood’s first newly built supermarket in decades. <br><br>
+
+  “It took two or three years from start to finish,” said Andy Torres, a manager at the new Shop Fair Supermarket on Saint Ann’s Avenue in Mott Haven. <br><br>
+  
+  A new supermarket is notable in a neighborhood considered to have high food insecurity and low food access, with just one supermarket for every 25 bodegas. <br><br>
+  
+  The new Shop Fair joins an older store a few blocks south at Brook Avenue and East 138th Street, which opened in 2020 in a former CTown Supermarket when that store’s owners defaulted on payments to a lender. <br><br>
+  
+  Neftali Medina, who owned that store, also owns a Met Foodmarket in Melrose and Pioneer Supermarkets in Williamsbridge and Highbridge. Other members of the Medina family own two Pioneer Supermarkets in Mott Haven and a store in Morris Park. The family also previously owned a supermarket on Cypress Avenue in Mott Haven. <br><br>
+  
+  José Medina’s longtime Pioneer Supermarket on Saint Ann’s Avenue—just two blocks south of the new Shop Fair—became a CTown in 2018, then returned to Pioneer in 2019. <br><br>
+  
+  “It was an administrative change,” said Carmen Medina, José’s sister, who manages the supermarket. <br><br>
+  
+  One of Melrose’s Fine Fare Supermarkets recently changed its name to SuperFresh. Another became Food Universe. In 2017, one of Longwood’s Fine Fares became a Food Fair Fresh Market. <br><br>
+
+</p>
+
+<div class="smallimage">
+  <img src="images/shopfair_smallimage.jpg" alt="Shop Fair supermarket in Mott Haven" class="image">
+  <div class="caption">
+    <img class="icon_yellow" src="images/icon_yellow.PNG" alt="Icon">
+    <p class="figcaption">The produce department of the new Mott Haven Shop Fair Supermarket.</p>
+  </div>
+</div>
+</div>
 
 
+<br><br><br>
 
-</script>
+<!-- <div class="placeholder">
+  <h3>This is a placeholder.</h3>
 
+</div> -->
+
+<img src="images/superfresh.JPG" class="bigpicture">
+
+
+<br><br><br>
+
+<div class="container rebranding">
+
+  <img src="images/icon.PNG" alt="Icon" class="icon">
+  <h2>Rebranding</h2>
+  <div class="line"></div>
+
+<p class="rebranding">
+So what’s in a name?
+
+Most independent supermarkets in New York City are members of retailers’ cooperatives. These are groups of store owners who share brand names, marketing, and wholesaler contracts.<br><br>
+  
+Pioneer and Met are brands within Long Island-based Associated Supermarket Group, which also represents Associated and Compare Foods Supermarkets, along with several independent grocers.<br><br>
+
+Meanwhile, Food Universe, SuperFresh, and Food Fair are all affiliated with New Jersey-based Key Food Stores Co-Operative.<br><br>
+
+Fine Fare and Shop Fair are affiliated with Retail Grocers Group, while CTown and Bravo are brands of Westchester County-based Krasdale Foods.<br><br>
+
+These cooperatives handle marketing and purchasing for the store owners. Each cooperative has a contract with a wholesaler, or has a wholesale division responsible for supplying the stores.<br><br>
+
+Store owners can choose to join or leave cooperatives, but typically, the cooperative keeps the rights to the name—meaning that if a store owner leaves a cooperative, they typically have to change the name.<br><br>
+
+Back in Woodstock, the new Food Universe is preparing to make some changes as it joins Key Food.  It will happen incrementally, says Nadia Diaz, the store’s office manager. “For now, it’s going to look the same,” she said.<br><br>
+
+By the end of September, though, she said customers can expect to see new awnings with the Food Universe name and new digital signage, replacing paper sale flyers in the windows.<br><br>
+
+Key Food introduced the Food Universe brand in 2014 specifically for stores previously operating as Associated, Met, Pioneer, and Compare. Their wholesaler went bankrupt that year, and in the same year, the Associated Supermarket Group was formed.<br><br>
+
+In 2014, Key Food had 165 supermarkets. Today, the cooperative represents more than double that.<br><br>
+
+More new supermarkets are preparing to open and refresh across the South Bronx, too.<br><br>
+
+In Longwood, local chain Antillana SuperFood has signed a 20-year lease for around 5,000 square feet at 1000 Westchester Ave. Antillana is affiliated with the Associated Supermarket Group. An as-yet unnamed supermarket is preparing to open at Grand Concourse and 144th Street. Meanwhile, the Bravo Supermarket on Westchester Avenue in Longwood is undergoing renovations.<br><br>
+
+And at the Bronx Terminal Market, a bright yellow sign advertising “unbelievable prices” announces the coming of a new Lidl Food Market. The Germany-based chain is preparing to open in the mall, and as a limited-assortment discount store it is different from stores like Food Universe or Shop Fair.<br><br>
+
+The Bronx Terminal Market is already home to Target and BJ’s Wholesale, which both sell groceries. It also houses the borough’s largest supermarket, a Food Bazaar, which opened in 2020.<br><br>
+
+</p>
+
+<div class="smallimage">
+  <img src="images/foodbazaar_smallimage.jpg" alt="Bronx Terminal Market Food Bazaar supermarket" class="image">
+  <div class="caption">
+    <img class="icon_yellow" src="images/icon_yellow.PNG" alt="Icon">
+    <p class="figcaption">The Food Bazaar Supermarket in the Bronx Terminal Market is the borough's largest.</p>
+  </div>
+</div>
+
+</div>
+
+
+<br><br><br>
+
+<!-- <div class="placeholder">
+  <h3>This is a placeholder.</h3>
+
+</div> -->
+
+<img src="images/pioneer.JPG" class="bigpicture">
+
+<br><br><br>
+
+<div class="container affordable">
+
+  <img src="images/icon.PNG" alt="Icon" class="icon">
+  <h2>Can I Afford It?</h2>
+  <div class="line"></div>
+
+<p class="affordable">
+
+  The big question remains, though: Do these changes matter?<br><br>
+
+  To Nevin Cohen, director of the Urban Food Policy Institute at the City University of New York’s School of Public Health, having a supermarket is not the deciding factor in a neighborhood’s health.<br><br>
+  
+  “Physical food access is not the cause of food insecurity and malnourishment,” he said.<br><br>
+  
+  “Just getting a new supermarket isn’t the only factor,” he said, adding, “Making sure it’s affordable is vital.”<br><br>
+  
+  Although Cohen declined to comment on specific chains of stores, he cited his own research from 2019, in which his team analyzed pricing at supermarkets across the five boroughs, all affiliated with the same grocery cooperative.<br><br>
+  
+  “The prices vary substantially based on the operator,” he said of his research, which indicated the median price for a selected basket of food was lower in the South Bronx than both the borough overall and the city overall.<br><br>
+  
+  On the other hand, he said any supermarket entering a neighborhood for the first time could bring down prices by offering more competition.<br><br>
+  
+  In fact, a 2020 study found that Lidl’s entry into the Long Island market pressured grocery prices down. Lately, though, Lidl has struggled as it expands in the United States, closing several locations and rethinking its strategy. Lidl did not respond to multiple requests for comment.<br><br>
+  
+  Cohen says he advocates for several solutions for food security, though, with participation in SNAP, access to community gardens, and even affordable housing contributing to food security.<br><br>
+  
+  “It’s moving upstream to solve this,” said Cohen.<br><br>
+
+  </p>
+
+
+  <div class="smallimage">
+    <img src="images/westernbeef_smallimage.jpg" alt="Western Beef supermarket wall of savings" class="image">
+    <div class="caption">
+      <img class="icon_yellow" src="images/icon_yellow.PNG" alt="Icon">
+      <p class="figcaption">A Bronx Western Beef Supermarket advertises its Power Wall of Savings.</p>
+    </div>
+  </div>
+
+  </div>
+
+  
+  <br><br><br>
+
+  <div class="container outro">
+<p><i>Use the map below to view all the supermarkets in the South Bronx and across the borough.</i></p>
+
+  </div>
+
+
+  <div class="map">
+  <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1htIlBvApBHS5WwuWdQL50RHeh14QX3Y&ehbc=2E312F&noprof=1" width="70%" height="600"></iframe>
+</div>
+
+  <br><br><br>
 </body>
 </html>
