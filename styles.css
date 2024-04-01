@@ -1,7 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
 
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rethink+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swa');
+
+* {
+    box-sizing: border-box;
+}
 
 body,
 html {
@@ -9,77 +27,74 @@ html {
     font-size: 16px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #0a012b;
-}
-
-.heading-container {
-    position: relative;
+/* responsive images */
+img {
     width: 100%;
-    overflow: hidden;
-}
-
-.heading-image {
-    width: 100%;
-    opacity: 0.5;
-}
-
-.content-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.icon {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 0 auto;
 }
 
 h1 {
     font-size: 3em;
-    font-family: "DM Sans", sans-serif;
-    color: white;
+    font-family: "Playfair Display", serif;
+    color: rgb(0, 74, 173);
+}
+
+h3 {
+    font-family: "Raleway", sans-serif;
 }
 
 h2 {
-    font-family: "DM Sans", sans-serif;
-    color: #ffde59;
     font-size: 2em;
-    text-align: center;
+    color: rgb(0, 74, 173);
 }
 
-.line {
-    width: 76%;
-    height: 2px;
-    background-color: white;
-    margin: 20px auto;
+h4 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    line-height: 0 em;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 h5 {
     font-size: 1.2em;
     line-height: 0 em;
     font-weight: 200;
-    font-family: "DM Sans", sans-serif;
-    color: white;
+    font-family: "Raleway", sans-serif;
 }
 
+h2 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+}
 
+p {
+    font-family: "Raleway", sans-serif;
+}
 
 figcaption,
 p {
-    line-height: 1.6em;
+    line-height: 1.5em;
     font-size: 1.2em;
-    font-family: "Lora", serif;
+    font-family: "Raleway", sans-serif;
 }
 
-p {
-    color: white;
+.subhead{
+    color: black;
+    text-align: left;
+}
+
+.disclaimer{
+    color: gray;
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
 }
 
 .container {
@@ -88,205 +103,157 @@ p {
     padding: 10px;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+.icon-container {
+    max-width: auto;
+    margin: 0 auto;
 }
 
-
-.section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.buttons-container {
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-
-
-animated_img {
-    max-width: 100%;
-    max-height: 100%;
-    opacity: 0;
-    /* transition: opacity 1s ease-in-out; */
+figure {
+    width: 100%;
+    margin: 0 auto;
 }
 
-
-.scene {
-    height: 50vh;
-    text-align: center;
-    display: flex;
-    margin-top: 200px;
-    background-color: beige;
-    margin: 25vh auto;
-    border: 2px solid black;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
+.main_img {
+    width: 100%;
 }
 
-/* .container {
-    display: flex;
-    justify-content: space-evenly;
-} */
-
-.placeholder {
-    background-color: white;
-    height: 200px;
-    text-align: center;
+.head-photo {
+    font-size: 1em;
+    color: gray;
+    margin: 5px;
 }
 
-.graphic-container, .slide-containers {
-    max-width: 50%;
+.icon-container img {
+    display: block;
+    max-width: 300px;
+    margin: auto;
 }
 
-.graphic-container {
-    position: sticky;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    top: 0px
+.graphic-text {
+    margin: auto;
 }
 
-#cat_img {
-    height: 300px;
+hr {
+    height: 4px;
+    background-color: rgb(255, 189, 89);
+    border: none;
 }
 
-#graphic-text {
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    width: 300px;
-}
-
-.scene.active {
-    background-color: aqua;
-}
-
-
-/* small image formatting */
-
-.smallimage {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .image {
-    width: 65%;
-    max-width: 800px;
-    height: auto;
-    float: right;
-  }
-
-  .caption {
-    background-color: #b83b3b;
+label {
+    font-size: 1.2em;
+    font-family: "Raleway", sans-serif;
+    margin: 0 auto;
     padding: 20px;
-    width: 35%;
-    /* max-width: 400px; */
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    top: 100px;
-    left: 0;
-  }
-
-  .figcaption {
-    color: white;
-  }
-
-  @media (max-width: 600px) {
-    .container {
-      flex-direction: column;
-    }
-
-    .image {
-      width: 100%;
-      float: none;
-    }
-
-    .caption {
-      width: 100%;
-    }
-  }
-
-
-/* dark icon formatting */
-.icon_dark,
-.icon_yellow {
-    width: 30px;
-    height: 30px;
-    /* opacity: 0.2; */
 }
 
-
-
-/* scroll formatting */
-.scroll_container {
-    height: 2000px; /* Adjust as needed */
-  }
-  
-  .scroll_image {
-    position: relative;
-    width: 100%;
-    height: 150vh;
-    overflow: hidden;
-  }
-  
-  .imgscrolly {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease;
-  }
-
-.bigpicture {
-    width: 100%;
-    opacity: 0.5;
+hr.thin {
+    height: 1px;
+    background: lightgray;
 }
 
+.span_sen {
+    background-color: rgb(255,224,154);
+    color: rgb(139, 106, 31);
+}
 
+.span_rep {
+    background-color: rgb(169, 181, 244);
+    color: rgb(31, 48, 139);
+}
 
-/* cell phone formatting */
+.span_sec {
+    background-color: rgb(230, 244, 193);
+    color: rgb(111, 139, 31);
+}
 
-@media(max-width: 600px) {
+.span_ag {
+    background-color: rgb(221, 192, 192);
+    color: rgb(139, 31, 31);
+}
 
+.span_union {
+    background-color: rgb(183, 215, 219);
+    color: rgb(31, 129, 139);
+}
 
+.span_state {
+    background-color: rgb(187, 225, 181);
+    color: rgb(46, 139, 31);
+}
 
-    .smallimage {
+.span_fed {
+    background-color: rgb(239, 185, 231);
+    color: rgb(139, 31, 122);
+}
+
+.span_di {
+    background-color: rgb(207, 207, 207);
+    color: rgb(84, 84, 84);
+}
+
+img{
+    width:50%;
+    height:auto;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    p.intro {
+        max-width: 65%,
+    }
+
+    .icon-container {
         /* Flex box styles go on the flex box element */
         display: flex;
-        flex-direction: column;
+        justify-content: space-evenly;
+        /* align-items: flex-start; */
     }
 
-
-    .caption {
-        background-color: #b83b3b;
-        padding: 20px;
-        width: 80%;
-        /* max-width: 400px; */
-        box-sizing: border-box;
-        overflow: hidden;
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-
-      .heading-container {
-        position: relative;
-        width: 100%;
-        height: 800px;
-        /* overflow: hidden; */
+    .graphic {
+        /* There are many ways to handle sizing, but flex-basis is the one that I like best for control.
+     * There are three elements so I made it 30%. With justify content set to space between, the extra 3% per element will go to negative space
+     * serving as gutters */
+        flex-basis: 30%;
+        /* can turn on this one or the one in icon-container. */
+        /* justify-content: space-between; */
+        /* font-size: 1.3em; */
     }
 
+    .graphic-text {
+        padding: 10px;
+        /* width: 500px; */
+    }
 }
 
-/* format map */
-.map {
-    display: block;
-    margin: auto;
-    text-align: center;
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 900px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+    .container {
+        max-width: 600px;
+    }
+
+    /* figure {
+        max-width: 1000px;
+    } */
+
+    figcaption {
+        max-width: 700px;
+        text-align: left;
+        justify-content: space-evenly;
+    }
 }
